@@ -7,6 +7,7 @@ import {useHistory} from 'react-router-dom';
 const Subscribers = () => {
     const history = useHistory();
     const { actions, store } = useContext(Context);
+
     useEffect(() => {
         if (store.subscribers.length === 0){
             history.push('/')

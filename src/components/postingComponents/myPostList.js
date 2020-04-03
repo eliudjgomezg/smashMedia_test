@@ -9,8 +9,8 @@ const MyPostsList = (props) => {
     const history = useHistory();
     const { store, actions } = useContext(Context);
 
-    const [editPost, setEditPost] = React.useState({ status: false });
-    const [loading, setloading] = React.useState({ status: false });
+    const [editPost, setEditPost] = React.useState(false);
+    const [loading, setloading] = React.useState(false);
 
     const showEditForm = (p, i) => {
         actions.dataEditForm(p, i);
@@ -20,36 +20,36 @@ const MyPostsList = (props) => {
 
         try {
 
-            setloading({ ...loading, status: true });
-            setEditPost({ ...editPost, status: false });
+            setloading( true );
+            setEditPost( false );
             const postDeleted = await Axios.delete('https://jsonplaceholder.typicode.com/posts/1');
             actions.setdelete(data);
-            setloading({ ...loading, status: false })
+            setloading( false )
             
 
         } catch (error) {
-            setEditPost({ ...editPost, status: true });
+            setEditPost( true );
             console.log(error)
         }
 
     }
     const openDeleteForm = () => {
-        setEditPost({ ...editPost, status: true });
+        setEditPost( true );
     }
 
     const closeDeleteForm = () => {
-        setloading({ ...loading, status: false })
+        setloading( false )
     }
     return (
         <>
-            <Dimmer inverted className='addLoaderPosition2' active={loading.status}>
+            <Dimmer inverted className='addLoaderPosition2' active={loading}>
                 <Loader inverted>Cargando......</Loader>
             </Dimmer>
             <Grid style={{ textAlign: 'center' }}>
                 {store.posts.map((p, i) => {
                     return (
                         <>
-                            <Dimmer inverted className='addLoaderPosition1' active={editPost.status}>
+                            <Dimmer inverted className='addLoaderPosition1' active={editPost}>
                                 <DeletePost dataPost={p} index={i} closeDeleteForm={closeDeleteForm} deleteForm={deleteForm} />
                             </Dimmer>
 

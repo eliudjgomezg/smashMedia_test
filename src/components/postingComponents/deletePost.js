@@ -1,9 +1,10 @@
 import React from 'react';
 import { Button, Message } from 'semantic-ui-react';
+import PropTypes from 'prop-types';
 
 
 export default function DeletePost(props) {
-    const {i, dataPost, closeDeleteForm, deleteForm} = props;
+    const { dataPost, closeDeleteForm, deleteForm } = props;
     
     return (
         <div>
@@ -19,3 +20,11 @@ export default function DeletePost(props) {
         </div>
     )
 }
+
+DeletePost.propTypes = {
+    dataPost: PropTypes.object
+};
+
+DeletePost.defaultProps = {
+    dataPost: {}
+};

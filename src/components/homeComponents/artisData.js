@@ -4,9 +4,7 @@ import { useHistory } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const ArtisData = (props) => {
-    let history = useHistory();
     const { name, username, email, website, phone, address, company } = props;
-    const [open, setOpen] = React.useState(false);
 
     const panels1 = [
         {
@@ -50,7 +48,6 @@ const ArtisData = (props) => {
             },
           },
       ]
-      const close = () => history.push('/');;
       
     return (
         <Modal trigger={<a style={{ float: 'left' }}>

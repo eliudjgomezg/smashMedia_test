@@ -9,16 +9,18 @@ import { useHistory } from 'react-router-dom';
 const EditPost = () => {
     const history = useHistory();
     const { actions, store } = useContext(Context);
-    
+    const [formData, setFormData] = React.useState(null);
+
     // Funciones Generales
-    const [loading, setloading] = React.useState({ status: false });
+    const [loading, setloading] = React.useState(true);
     // React Hook Form Functions
     const { register, errors, handleSubmit, clearError } = useForm();
+
     const onSubmit = async (data, e) => {
         
         try {
 
-            setloading({ ...loading, status: true });
+            setloading(true);
             const editedPost = await axios.put('https://jsonplaceholder.typicode.com/posts/1', {
                 name: data.name,
                 title: data.title,
@@ -27,7 +29,7 @@ const EditPost = () => {
             });
             actions.setPut(editedPost.data);
             e.target.reset();
-            setloading({ ...loading, status: false });
+            setloading(false);
             history.push('/posting')
 
         } catch (error) {
@@ -40,13 +42,17 @@ const EditPost = () => {
         history.push('/posting')
 
     }
+    useEffect(() => {
+        setFormData(store.post);
+        setloading( false );
+    }, []);
 
     return (
         <>
-            <Dimmer inverted className='addLoaderPosition' active={loading.status}>
+            <Dimmer inverted className='addLoaderPosition' active={loading}>
                 <Loader inverted>Cargando......</Loader>
             </Dimmer>
-            <Container>
+            {!loading && <Container>
                 <div className='mt'>
                     <Header as='h4'>Edita tu post</Header>
                 </div>
@@ -54,13 +60,13 @@ const EditPost = () => {
                 <Form onSubmit={handleSubmit(onSubmit)}>
                     <Form.Field>
                         <label>Nombre</label>
-                        <input name='name' value={store.post.name} ref={
+                        <input name='name' value={formData.name} ref={
                             register({
                                 required: { value: true, message: 'Campo Obligatorio' },
                                 maxLength: { value: 20, message: 'Maximo 70 Caracteres' },
                             })
                         }
-                            onChange={(e) => actions.handleChange(e)}
+                            onChange={(e) => setFormData({name:e.target.value})}
                         />
                         <spam style={{ color: '#DC004E' }}>
                             {errors?.name?.message}
@@ -69,13 +75,13 @@ const EditPost = () => {
 
                     <Form.Field>
                         <label>Titulo</label>
-                        <input name='title' value={store.post.title} ref={
+                        <input name='title' value={formData.title} ref={
                             register({
                                 required: { value: true, message: 'Campo Obligatorio' },
                                 maxLength: { value: 20, message: 'Maximo 120 Caracteres' },
                             })
                         }
-                            onChange={(e) => actions.handleChange(e)}
+                            onChange={(e) => setFormData({title:e.target.value})}
                         />
                         <spam style={{ color: '#DC004E' }}>
                             {errors?.title?.message}
@@ -84,13 +90,13 @@ const EditPost = () => {
 
                     <Form.Field>
                         <label>Post</label>
-                        <textarea name='post' value={store.post.post} row='10' ref={
+                        <textarea name='post' value={formData.post} row='10' ref={
                             register({
                                 required: { value: true, message: 'Campo Obligatorio' },
                                 maxLength: { value: 20, message: 'Maximo 500 Caracteres' },
                             })
                         }
-                            onChange={(e) => actions.handleChange(e)}
+                            onChange={(e) => setFormData({post:e.target.value})}
                         />
                         <spam style={{ color: '#DC004E' }}>
                             {errors?.post?.message}
@@ -99,7 +105,7 @@ const EditPost = () => {
                     <Button type='reset' onClick={dissmisEditForm}>Cancelar</Button>
                     <Button type='submit'>Enviar</Button>
                 </Form>
-            </Container>
+            </Container>}
         </>
     );
 }

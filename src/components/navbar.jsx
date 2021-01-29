@@ -5,7 +5,7 @@ function Navbar() {
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className='container'>
         <a className="navbar-brand" href="/">
-          <h1>CURD</h1>
+          <h1>CRUD</h1>
         </a>
 
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

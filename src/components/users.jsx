@@ -116,7 +116,7 @@ Ver sección de errores.
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.comapi/v1/delete_one_useid
+          https://crud-placeholder.herokuapp.com/api/v1/delete_one_useid
         </code>
       </pre>
 
@@ -131,7 +131,7 @@ Ver sección de errores.
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.comapi/api/v1/delete_all_users/
+          https://crud-placeholder.herokuapp.com/api/v1/delete_all_users/
         </code>
       </pre>
 

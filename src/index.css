@@ -1,0 +1,16 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+pre {
+  background-color: #F8F9FA;
+  border-radius: 6px;
+  padding: 10px
+}
+
+.welcome-section {
+  background-color: #DBEAFE;
+  height: 40vh;
+  padding: 200px 0;
+}

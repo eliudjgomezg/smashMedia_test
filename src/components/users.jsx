@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ContactList() {
+function Users() {
   const resp = `
 {
   status: "success",
@@ -12,24 +12,24 @@ function ContactList() {
   status: "success"
 }
   `
-
   const schema = `
-name: { type: String, required: true, unique: true, dropDups: true }
-email: { type: String, required: true, unique: true, dropDups: true }
+name: { type: String, required: true }
+email: { type: String, required: true, unique: true }
 phone: { type: Number, required: true }
-address: { type: String, required: true}
+password: { type: String, required: true}
 
-Esta es la esctructura de datos con la que debes crear un contacto. 
-La api solo permite crear contactos unicos, asi que si repites el "nombre" o "correo" de un contacto ya creado, devolverá un error.
+Esta es la esctructura de datos con la que debes crear un usuario. 
+La api solo permite crear Usuarios unicos, asi que si repites el "correo" de un usuario ya creado, devolverá un error.
 Ver sección de errores.
   `
+
   return (
     <div className='container py-5'>
       <h1>
-        En esta seccion estan los endpoint y sus respuestas para el ejercico Contact list
+        En esta seccion estan los endpoint y sus respuestas para hacer CRUD con usuarios
       </h1>
 
-      <h2>Estructura de datos de un contacto</h2>
+      <h2>Estructura de datos del usuario</h2>
       <h3>Schema</h3>
       <pre>
         <code>
@@ -37,11 +37,11 @@ Ver sección de errores.
         </code>
       </pre>
 
-      <h2>Obtener todas los contactos</h2>
+      <h2>Obtener todos los Usuarios</h2>
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/get_all_contactList/
+          https://crud-placeholder.herokuapp.com/api/v1/get_all_users/
         </code>
       </pre>
 
@@ -52,11 +52,11 @@ Ver sección de errores.
         </code>
       </pre>
 
-      <h2>Obtener un contacto</h2>
+      <h2>Obtener un usuario</h2>
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/get_one_contactList/id
+          https://crud-placeholder.herokuapp.com/api/v1/get_one_user/id
         </code>
       </pre>
 
@@ -67,11 +67,26 @@ Ver sección de errores.
         </code>
       </pre>
 
-      <h2>Crear un contacto</h2>
+      <h2>Login un usuario</h2>
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/post_contactList/
+          https://crud-placeholder.herokuapp.com/api/v1/login_user/
+        </code>
+      </pre>
+
+      <h3>Respuesta</h3>
+      <pre>
+        <code>
+          {resp}
+        </code>
+      </pre>
+
+      <h2>Crear un usuario</h2>
+      <h3>Endpoint</h3>
+      <pre>
+        <code>
+          https://crud-placeholder.herokuapp.com/api/v1/post_user/
         </code>
       </pre>
 
@@ -86,7 +101,7 @@ Ver sección de errores.
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/put_contactList/id
+          https://crud-placeholder.herokuapp.com/api/v1/put_user/id
         </code>
       </pre>
 
@@ -97,11 +112,11 @@ Ver sección de errores.
         </code>
       </pre>
 
-      <h2>Eliminar un contacto</h2>
+      <h2>Eliminar un usuario</h2>
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.comapi/v1/delete_one_contactList/id
+          https://crud-placeholder.herokuapp.comapi/v1/delete_one_useid
         </code>
       </pre>
 
@@ -112,11 +127,11 @@ Ver sección de errores.
         </code>
       </pre>
 
-      <h2>Eliminar todas los contactos</h2>
+      <h2>Eliminar todas los Usuarios</h2>
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.comapi/api/v1/delete_all_contactList/
+          https://crud-placeholder.herokuapp.comapi/api/v1/delete_all_users/
         </code>
       </pre>
 
@@ -127,9 +142,9 @@ Ver sección de errores.
         </code>
       </pre>
 
-      <hr  id='users'/>
+      <hr id='error'/>
     </div>
   )
 }
 
-export default ContactList
+export default Users

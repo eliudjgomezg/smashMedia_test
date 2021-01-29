@@ -1,6 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
 * {
   margin: 0px;
   padding: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2 {
+  font-family: 'Exo', sans-serif !important;
+}
+
+h3 {
+  font-family: 'Exo', sans-serif !important;
+  color: gray
+}
+
+nav {
+  min-height: 70px;
+}
+
+.nav-menu-position {
+  justify-content: flex-end !important; 
+}
+
+.welcome-section {
+  background-color: #DBEAFE;
+  height: 40vh;
+  padding: 200px 0;
+  margin-top: 47px;
 }
 
 pre {
@@ -9,8 +40,12 @@ pre {
   padding: 10px
 }
 
-.welcome-section {
-  background-color: #DBEAFE;
-  height: 40vh;
-  padding: 200px 0;
+footer {
+  height: 100px;
+}
+
+@media screen and (max-width: 930px) {
+  .nav-menu-position {
+    float: left !important; 
+  }
 }

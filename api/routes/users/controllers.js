@@ -5,7 +5,7 @@ const get_all_users = async (req, res) => {
     const list = await Users.find({});
     const resp = {
       status: 'success',
-      user: list
+      users: list
     }
     res.send(resp);
   } catch (error) {

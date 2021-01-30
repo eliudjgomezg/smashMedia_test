@@ -1,10 +1,16 @@
 import React from 'react'
 
 function Users() {
+  const respAll = `
+{
+  status: "success",
+  users: [{...}, {...}, {...}, {...}]
+}
+  `
   const resp = `
 {
   status: "success",
-  task: Respuesta solicitada
+  user: {...}
 }
   `
   const deleteResp = `
@@ -13,10 +19,10 @@ function Users() {
 }
   `
   const schema = `
-name: { type: String, required: true }
-email: { type: String, required: true, unique: true }
-phone: { type: Number, required: true }
-password: { type: String, required: true}
+name: type: String, required: true 
+email: type: String, required: true, unique: true 
+phone: type: Number, required: true 
+password: type: String, required: true
 
 Esta es la esctructura de datos con la que debes crear un usuario. 
 La api solo permite crear Usuarios unicos, asi que si repites el "correo" de un usuario ya creado, devolverá un error.
@@ -48,7 +54,7 @@ Ver sección de errores.
       <h3>Respuesta</h3>
       <pre>
         <code>
-          {resp}
+          {respAll}
         </code>
       </pre>
 

@@ -36,7 +36,7 @@ function Fetch() {
   const putMethod = `
       fetch('URL' + id, {
         method: "PUT",
-        body: JSON.stringify(taskToEdit),
+        body: JSON.stringify(data),
         headers: {
           'Content-Type': 'application/json',
         }

@@ -1,11 +1,19 @@
 import React from 'react'
 
 function ContactList() {
+  const respAll = `
+{
+  status: "success",
+  contacts: [{...}, {...}, {...}, {...}]
+}
+    `
+
   const resp = `
 {
   status: "success",
-  task: Respuesta solicitada
+  contact: {...}
 }
+
   `
   const deleteResp = `
 {
@@ -14,10 +22,10 @@ function ContactList() {
   `
 
   const schema = `
-name: { type: String, required: true, unique: true, dropDups: true }
-email: { type: String, required: true, unique: true, dropDups: true }
-phone: { type: Number, required: true }
-address: { type: String, required: true}
+name: type: String, required: true, unique: true, dropDups: true 
+email: type: String, required: true, unique: true, dropDups: true 
+phone: type: Number, required: true
+address: type: String, required: true
 
 Esta es la esctructura de datos con la que debes crear un contacto. 
 La api solo permite crear contactos unicos, asi que si repites el "nombre" o "correo" de un contacto ya creado, devolverá un error.
@@ -37,7 +45,7 @@ Ver sección de errores.
         </code>
       </pre>
 
-      <h2>Obtener todas los contactos</h2>
+      <h2>Obtener todos los contactos</h2>
       <h3>Endpoint</h3>
       <pre>
         <code>
@@ -48,7 +56,7 @@ Ver sección de errores.
       <h3>Respuesta</h3>
       <pre>
         <code>
-          {resp}
+          {respAll}
         </code>
       </pre>
 
@@ -127,7 +135,7 @@ Ver sección de errores.
         </code>
       </pre>
 
-      <hr  id='users'/>
+      <hr id='users' />
     </div>
   )
 }

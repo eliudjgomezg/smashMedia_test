@@ -1,10 +1,16 @@
 import React from 'react'
 
 function TodoList() {
+  const respAll = `
+{
+  status: "success",
+  tasks: [{...}, {...}, {...}, {...}]
+}
+  `
   const resp = `
 {
   status: "success",
-  task: Respuesta solicitada
+  task: {...}
 }
   `
   const deletedResp = `
@@ -14,10 +20,10 @@ function TodoList() {
   `
 
   const schema = `
-  assignedTo: { type: String, required: true }
-  createdAt: { type: String, required: true }
-  task: { type: String, required: true }
-  completed: {type: Boolean, default: false}
+  assignedTo: type: String, required: true 
+  createdAt: type: String, required: true 
+  task: type: String, required: true 
+  completed: type: Boolean, default: false
   `
   return (
     <div className='container py-5' id='todoList'>
@@ -44,7 +50,7 @@ function TodoList() {
       <h3>Respuesta</h3>
       <pre>
         <code>
-          {resp}
+          {respAll}
         </code>
       </pre>
 
@@ -123,7 +129,7 @@ function TodoList() {
         </code>
       </pre>
 
-      <hr id='contactList'/>
+      <hr id='contactList' />
     </div>
   )
 }

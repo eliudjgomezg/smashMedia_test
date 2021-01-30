@@ -5,7 +5,7 @@ const get_all_contactList = async (req, res) => {
     const list = await Contactlist.find({});
     const resp = {
       status: 'success',
-      contact: list
+      contacts: list
     }
     res.send(resp);
   } catch (error) {

@@ -1,4 +1,4 @@
-const Users = require("../../collections/contact_list")
+const Users = require("../../collections/users")
 
 const get_all_users = async (req, res) => {
   try {

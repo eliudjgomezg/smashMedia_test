@@ -1,4 +1,4 @@
-const TodoList = require("../../collections/contact_list")
+const TodoList = require("../../collections/todo_list")
 
 const get_all_TodoList = async (req, res) => {
   try {

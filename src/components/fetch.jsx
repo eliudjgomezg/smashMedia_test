@@ -7,9 +7,13 @@ function Fetch() {
       'Content-Type': 'application/json'
     }
   })
-    .then(resp => { return resp.json() })
-    .then(data => { Respuesta guardada en "data" lista para ser usada  })
-    .catch(error => console.log('Error:', error));
+    .then((resp) => { return resp.json() })
+    .then((data) => {
+      //Agregar todo el codigo necesario para lograr los objetivos
+      //La respuesta guardada en "data" lista para ser usada 
+      console.log(data) 
+    })
+    .catch((error) => console.log('Error:', error));
   `
 
   const postMethod = `
@@ -20,9 +24,13 @@ function Fetch() {
         'Content-Type': 'application/json',
       }
     })
-      .then(resp => { return resp.json() })
-      .then(data => { Respuesta guardada en "data" lista para ser usada })
-      .catch(error => console.log('Error:', error));
+      .then((resp) => { return resp.json() })
+      .then((data) => {
+        //Agregar todo el codigo necesario para lograr los objetivos
+        //La respuesta guardada en "data" lista para ser usada 
+        console.log(data) 
+      })
+      .catch((error) => console.log('Error:', error));
     `
 
   const putMethod = `
@@ -33,11 +41,13 @@ function Fetch() {
           'Content-Type': 'application/json',
         }
       })
-        .then(resp => { return resp.json() })
-        .then(data => { Respuesta guardada en "data" lista para ser usada )
-          setLista(listaEdited)
+        .then((resp) => { return resp.json() })
+        .then((data) => {
+          //Agregar todo el codigo necesario para lograr los objetivos
+          //La respuesta guardada en "data" lista para ser usada 
+          console.log(data) 
         })
-        .catch(error => console.log('Error:', error));
+        .catch((error) => console.log('Error:', error));
       `
 
   const deleteMethod = `
@@ -48,9 +58,13 @@ function Fetch() {
           'Content-Type': 'application/json',
         }
       })
-        .then(resp => { return resp.json() })
-        .then(data => { Respuesta guardada en "data" lista para ser usada })
-        .catch(error => console.log('Error:', error));
+        .then((resp) => { return resp.json() })
+        .then((data) => {
+          //Agregar todo el codigo necesario para lograr los objetivos
+          //La respuesta guardada en "data" lista para ser usada 
+          console.log(data) 
+        })
+        .catch((error) => console.log('Error:', error));
     }
       `
 

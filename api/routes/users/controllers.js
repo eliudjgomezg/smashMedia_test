@@ -38,7 +38,7 @@ const get_one_user = async (req, res) => {
 const login_user = async (req, res) => {
   try {
     const user = req.body
-    const userToLogin = await Guard.findOne({ email: user.email });
+    const userToLogin = await Users.findOne({ email: user.email });
     if (userToLogin.password === user.password) {
       const resp = {
         status: 'success',

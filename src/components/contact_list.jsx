@@ -64,7 +64,7 @@ Ver sección de errores.
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/get_one_contactList/id
+          https://crud-placeholder.herokuapp.com/api/v1/get_one_contactList/id (Borrar id y reemplazar)
         </code>
       </pre>
 
@@ -90,11 +90,11 @@ Ver sección de errores.
         </code>
       </pre>
 
-      <h2>Editar una tarea</h2>
+      <h2>Editar un contacto</h2>
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/put_contactList/id
+          https://crud-placeholder.herokuapp.com/api/v1/put_contactList/id (Borrar id y reemplazar)
         </code>
       </pre>
 
@@ -109,7 +109,7 @@ Ver sección de errores.
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/delete_one_contactList/id
+          https://crud-placeholder.herokuapp.com/api/v1/delete_one_contactList/id (Borrar id y reemplazar)
         </code>
       </pre>
 

@@ -62,7 +62,7 @@ Ver sección de errores.
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/get_one_user/id
+          https://crud-placeholder.herokuapp.com/api/v1/get_one_user/id (Borrar id y reemplazar)
         </code>
       </pre>
 
@@ -85,6 +85,7 @@ Ver sección de errores.
       <pre>
         <code>
           {resp}
+          Para hacer login de un usuario, usar el metodo POST
         </code>
       </pre>
 
@@ -107,7 +108,7 @@ Ver sección de errores.
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/put_user/id
+          https://crud-placeholder.herokuapp.com/api/v1/put_user/id (Borrar id y reemplazar)
         </code>
       </pre>
 
@@ -122,7 +123,7 @@ Ver sección de errores.
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/delete_one_useid
+          https://crud-placeholder.herokuapp.com/api/v1/delete_one_user/id (Borrar id y reemplazar)
         </code>
       </pre>
 

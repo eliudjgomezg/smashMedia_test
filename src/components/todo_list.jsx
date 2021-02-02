@@ -58,7 +58,7 @@ function TodoList() {
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/get_one_todoList/id
+          https://crud-placeholder.herokuapp.com/api/v1/get_one_todoList/id (Borrar id y reemplazar)
         </code>
       </pre>
 
@@ -88,7 +88,7 @@ function TodoList() {
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/put_todoList/id
+          https://crud-placeholder.herokuapp.com/api/v1/put_todoList/id (Borrar id y reemplazar)
         </code>
       </pre>
 
@@ -103,7 +103,7 @@ function TodoList() {
       <h3>Endpoint</h3>
       <pre>
         <code>
-          https://crud-placeholder.herokuapp.com/api/v1/delete_one_todoList/id
+          https://crud-placeholder.herokuapp.com/api/v1/delete_one_todoList/id (Borrar id y reemplazar)
         </code>
       </pre>
 
